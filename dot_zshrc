@@ -9,15 +9,15 @@ eval "$(starship init zsh)"
 
 # fnm
 export PATH="/home/quentin/.local/share/fnm:$PATH"
-eval "`fnm env`"
+eval "`fnm env --use-on-cd`"
 
 # bun completions
-# [ -s "/home/quentin/.bun/_bun" ] && source "/home/quentin/.bun/_bun"
+[ -s "/home/quentin/.bun/_bun" ] && source "/home/quentin/.bun/_bun"
 
 # bun
-#export BUN_INSTALL="$HOME/.bun"
-#export PATH="$BUN_INSTALL/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
-#export DENO_INSTALL="/home/quentin/.deno"
-#export PATH="$DENO_INSTALL/bin:$PATH"
+export DENO_INSTALL="/home/quentin/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH=/home/quentin/.local/bin:$PATH
