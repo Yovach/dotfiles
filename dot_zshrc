@@ -15,7 +15,7 @@ SAVEHIST='128000'
 
 ### Plugis
 
-plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
+plugins=(z zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
