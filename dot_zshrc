@@ -37,3 +37,5 @@ export DENO_INSTALL="/home/quentin/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH=/home/quentin/.local/bin:$PATH
 export PATH="$HOME/.symfony5/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
