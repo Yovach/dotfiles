@@ -36,3 +36,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export DENO_INSTALL="/home/quentin/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH=/home/quentin/.local/bin:$PATH
+export PATH="$HOME/.symfony5/bin:$PATH"
