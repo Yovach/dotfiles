@@ -23,19 +23,20 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 eval "$(starship init zsh)"
 
 # fnm
-export PATH="/home/quentin/.local/share/fnm:$PATH"
+export PATH="$HOME/.local/share/fnm:$PATH"
 eval "`fnm env --use-on-cd`"
 
 # bun completions
-[ -s "/home/quentin/.bun/_bun" ] && source "/home/quentin/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export DENO_INSTALL="/home/quentin/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH=/home/quentin/.local/bin:$PATH
+
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
