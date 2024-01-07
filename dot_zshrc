@@ -1,45 +1,37 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-### History
-HISTFILE=~/.zsh_history
-setopt HIST_IGNORE_DUPS
-HISTSIZE='128000'
-SAVEHIST='128000'
+EDITOR=nvim
 
-### Plugis
-
-plugins=(z zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
-
+# Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-eval "$(starship init zsh)"
 
-# fnm
-#export PATH="$HOME/.local/share/fnm:$PATH"
-#eval "`fnm env --use-on-cd`"
-
-# bun completions
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-
-# bun
+# Initialize bun with completions and PATH
+if [ -s "$HOME/.bun/_bun" ]; then
+    source "$HOME/.bun/_bun"
+fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Initialize deno
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Initialize asdf with completions
 . "$HOME/.asdf/asdf.sh"
-
 fpath+=(${ASDF_DIR}/completions $fpath)
 
-### Basic config
-
+# Initialize zsh's completion system
 autoload -U compinit
 compinit
+
+# Initialize starship
+eval "$(starship init zsh)"
 
