@@ -17,8 +17,8 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 eval "$(starship init zsh)"
 
 # fnm
-export PATH="$HOME/.local/share/fnm:$PATH"
-eval "`fnm env --use-on-cd`"
+#export PATH="$HOME/.local/share/fnm:$PATH"
+#eval "`fnm env --use-on-cd`"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
