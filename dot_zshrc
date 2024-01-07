@@ -3,6 +3,8 @@ ZSH_THEME="robbyrussell"
 
 EDITOR=nvim
 
+plugins=(z zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
+
 # Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
