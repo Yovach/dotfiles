@@ -9,18 +9,6 @@ plugins=(z zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-sea
 source $ZSH/oh-my-zsh.sh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-
-# Initialize bun with completions and PATH
-if [ -s "$HOME/.bun/_bun" ]; then
-    source "$HOME/.bun/_bun"
-fi
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Initialize deno
-export DENO_INSTALL="$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.symfony5/bin:$PATH"
