@@ -12,7 +12,6 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.symfony5/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Initialize asdf with completions
 . "$HOME/.asdf/asdf.sh"
