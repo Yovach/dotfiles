@@ -22,3 +22,6 @@ vim.keymap.set('n', '<Right>', '<Nop>', { silent = true })
 vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and clear hlsearch', silent = true })
 -- Save
 vim.keymap.set('n', '<C-S>', '<CMD>w<CR>', { silent = true, desc = 'Save file' })
+
+
+vim.keymap.set("n", "<C-u>", "<CMD>NvimTreeToggle<CR>")
