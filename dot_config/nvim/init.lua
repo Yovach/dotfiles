@@ -1,3 +1,6 @@
+local opts = require("options")
+opts.init()
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
