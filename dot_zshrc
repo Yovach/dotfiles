@@ -18,6 +18,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 . "$HOME/.asdf/asdf.sh"
 fpath+=(${ASDF_DIR}/completions $fpath)
 
+
+alias vim="nvim"
+
 # Initialize zsh's completion system
 autoload -U compinit
 compinit
