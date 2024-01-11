@@ -1,6 +1,18 @@
 local opts = {}
 
 function opts.init()
+
+  vim.opt.termguicolors = true
+
+  -- Indents
+  vim.opt.tabstop = 2
+  vim.opt.shiftwidth = 2
+  vim.opt.softtabstop = 2
+  vim.opt.expandtab = true
+  vim.opt.smartindent = true
+
+  vim.opt.cursorline = true
+
   vim.opt.autoread = true -- Read a file when it was changed outside of nvim
   vim.opt.autowrite = true -- Automatically write file when it was changed
   vim.opt.encoding = 'UTF-8' -- Default encoding
