@@ -23,5 +23,9 @@ vim.keymap.set({ 'i', 'n' }, '<esc>', '<cmd>noh<cr><esc>', { desc = 'Escape and 
 -- Save
 vim.keymap.set('n', '<C-S>', '<CMD>w<CR>', { silent = true, desc = 'Save file' })
 
+-- THE F1 BUTTON IS SO FUCKING ANNOYING BRO
+vim.keymap.set("v", "<F1>", "", { silent=true })
+vim.keymap.set("i", "<F1>", "", { silent=true })
+vim.keymap.set("n", "<F1>", "", { silent=true })
 
 vim.keymap.set("n", "<C-u>", "<CMD>NvimTreeToggle<CR>")
