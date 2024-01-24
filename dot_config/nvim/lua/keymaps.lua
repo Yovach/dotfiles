@@ -53,4 +53,4 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down", silent =
 vim.keymap.set("n", "<C-u>", "<CMD>NvimTreeToggle<CR>", { desc = "Toggle the NvimTree", silent = true })
 
 -- Git
-vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { silent = true, desc = 'Git' })
+vim.keymap.set('n', '<leader>gg', '<CMD>LazyGit<CR>', { silent = true, desc = 'Git' })
