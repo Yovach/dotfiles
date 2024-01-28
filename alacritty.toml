@@ -90,5 +90,6 @@ family = "CaskaydiaCove Nerd Font"
 
 [keyboard]
 bindings = [
-	{ key = "F11", action = "ToggleFullscreen" }
+	{ key = "F11", action = "ToggleFullscreen" },
+	{ key = "Space", mods = "Control", chars = "\u0000" }
 ]
