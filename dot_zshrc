@@ -4,11 +4,6 @@ ZSH_THEME="robbyrussell"
 EDITOR=nvim
 
 plugins=(z tmux fzf zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
-ZSH_TMUX_AUTOSTART=true
-
-# Source oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
@@ -23,9 +18,7 @@ source "$HOME/.cargo/env"
 
 alias vim="nvim"
 
-# Initialize zsh's completion system
-autoload -U compinit
-compinit
+source $ZSH/oh-my-zsh.sh
 
 # Initialize starship
 eval "$(starship init zsh)"
