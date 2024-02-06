@@ -4,11 +4,11 @@ DISABLE_AUTO_UPDATE="true"
 
 EDITOR=nvim
 
-plugins=(z tmux fzf zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
+plugins=(z fzf zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
 
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.symfony5/bin:$PATH"
+# export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Initialize asdf with completions
