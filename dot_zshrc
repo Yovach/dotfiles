@@ -12,7 +12,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Initialize asdf with completions
 . "$HOME/.asdf/asdf.sh"
-fpath+=(${ASDF_DIR}/completions $fpath)
 
 source "$HOME/.cargo/env"
 
