@@ -1,8 +1,9 @@
 return {
   'akinsho/bufferline.nvim',
   version = '*',
+  event = { 'BufReadPre', 'BufNewFile' },
+  after = 'catppuccin',
   dependencies = 'nvim-tree/nvim-web-devicons',
-  after = "catppuccin",
   config = function ()
 
     vim.opt.termguicolors = true

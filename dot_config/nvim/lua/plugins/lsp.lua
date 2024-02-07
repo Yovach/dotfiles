@@ -1,4 +1,4 @@
-local servers = { 'dockerls', 'docker_compose_language_service', 'tsserver', 'rust_analyzer', 'tailwindcss', 'jsonls', 'cssls', 'html' }
+local servers = { 'dockerls', 'docker_compose_language_service', 'tsserver', 'rust_analyzer', 'tailwindcss', 'jsonls', 'cssls', 'html', 'biome' }
 
 return {
   'williamboman/mason.nvim',
@@ -6,6 +6,7 @@ return {
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
   },
+  event = { 'BufReadPre', 'BufNewFile' },
   config = function()
     -- [[ Configure LSP ]]
     --  This function gets run when an LSP connects to a particular buffer.
