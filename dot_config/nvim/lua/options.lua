@@ -31,6 +31,9 @@ function opts.init()
   vim.opt.smartindent = true -- Insert indents automatically
   vim.opt.winbar = '' -- Disable winbar
 
+  vim.opt.ignorecase = true
+  vim.opt.smartcase = true
+
   if vim.fn.has('wsl') == 1 then
     vim.g.clipboard = {
       name = 'WslClipboard',
