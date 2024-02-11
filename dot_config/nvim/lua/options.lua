@@ -13,15 +13,15 @@ function opts.init()
   vim.opt.expandtab = true
   vim.opt.smartindent = true
 
-  vim.opt.cursorline = true
-
+  -- Preferences
   vim.opt.autoread = true -- Read a file when it was changed outside of nvim
   vim.opt.autowrite = true -- Automatically write file when it was changed
   vim.opt.encoding = 'UTF-8' -- Default encoding
   vim.opt.number = true -- Number in front of each line
+  vim.opt.relativenumber = true
   vim.opt.mouse = 'a' -- Enabled in all mode
   vim.opt.signcolumn = 'yes'
-  vim.opt.wrap = true -- Long lines are not wrapped
+  vim.opt.wrap = true -- Long lines are wrapped
   vim.opt.completeopt = { 'menu', 'menuone', 'noselect', 'preview' }
   vim.opt.splitbelow = true -- Cursor go on the left window when split
   vim.opt.splitright = true -- Cursor go on the right windows when split
@@ -33,6 +33,9 @@ function opts.init()
 
   vim.opt.ignorecase = true
   vim.opt.smartcase = true
+
+  -- Hide command bar
+  vim.opt.cmdheight = 0
 
   if vim.fn.has('wsl') == 1 then
     vim.g.clipboard = {
