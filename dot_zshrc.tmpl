@@ -10,13 +10,16 @@ plugins=(z fzf zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
+{{ if eq .chezmoi.hostname "LAPTOP-QUENTIN" }}
+# config perso
 # export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+source "$HOME/.cargo/env"
+{{ end }}
+
 # Initialize asdf with completions
 . "$HOME/.asdf/asdf.sh"
-
-source "$HOME/.cargo/env"
 
 alias vim="nvim"
 alias tms="tmux-sessionizer"
