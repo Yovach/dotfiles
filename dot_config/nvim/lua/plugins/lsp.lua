@@ -1,4 +1,5 @@
-local servers = { 'dockerls', 'docker_compose_language_service', 'tsserver', 'rust_analyzer', 'tailwindcss', 'jsonls', 'cssls', 'html', 'biome' }
+local servers = { 'dockerls', 'docker_compose_language_service', 'tsserver', 'rust_analyzer', 'tailwindcss', 'jsonls',
+  'cssls', 'html', 'biome' }
 
 return {
   'williamboman/mason.nvim',
@@ -26,7 +27,9 @@ return {
       end
 
       nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-      nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
+      nmap('<leader>ca', function()
+        vim.lsp.buf.code_action { context = { only = { 'quickfix', 'refactor', 'source' } } }
+      end, '[C]ode [A]ction')
 
       nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
       nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
