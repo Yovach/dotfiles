@@ -8,6 +8,8 @@ plugins=(z fzf zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring
 
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
+
 # export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -17,6 +19,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 source "$HOME/.cargo/env"
 
 alias vim="nvim"
+alias tms="tmux-sessionizer"
 
 source $ZSH/oh-my-zsh.sh
 
