@@ -24,7 +24,9 @@ return {
           i = {
             ['<C-u>'] = false,
             ['<C-d>'] = false,
-          },
+
+            ["<S-Down>"] = require("telescope.actions").cycle_history_next,
+            ["<S-Up>"] = require("telescope.actions").cycle_history_prev },
         },
       },
       pickers = {
