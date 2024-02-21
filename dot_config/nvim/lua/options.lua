@@ -34,6 +34,10 @@ function opts.init()
   vim.opt.ignorecase = true
   vim.opt.smartcase = true
 
+  vim.opt.foldmethod = "expr"
+  vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+  vim.opt.foldenable = false
+
   -- Hide command bar
   vim.opt.cmdheight = 0
 
