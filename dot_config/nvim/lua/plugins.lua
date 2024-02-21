@@ -21,5 +21,8 @@ return {
       }
       vim.cmd.colorscheme 'catppuccin'
     end,
+  },
+  {
+    'mg979/vim-visual-multi'
   }
 }
