@@ -10,7 +10,8 @@ plugins=(z fzf zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
-{{ if eq .chezmoi.hostname "LAPTOP-QUENTIN" }}
+{{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin")) }}
+
 # config perso
 # export PATH="$HOME/.symfony5/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
