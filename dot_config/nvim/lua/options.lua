@@ -31,6 +31,14 @@ function opts.init()
   vim.opt.smartindent = true -- Insert indents automatically
   vim.opt.winbar = '' -- Disable winbar
 
+  vim.opt.clipboard = 'unnamedplus'
+
+  -- Decrease update time
+  vim.opt.updatetime = 250
+  vim.opt.timeoutlen = 300
+
+  vim.opt.scrolloff = 10 -- Keep 10 lines while scrolling
+
   vim.opt.ignorecase = true
   vim.opt.smartcase = true
 
