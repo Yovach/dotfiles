@@ -1,8 +1,5 @@
 return {
   {
-    'windwp/nvim-ts-autotag',
-  },
-  {
     'nvim-treesitter/nvim-treesitter-context',
     opts = {
       mode = "cursor",
@@ -13,6 +10,7 @@ return {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
+      'windwp/nvim-ts-autotag',
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
