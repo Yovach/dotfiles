@@ -33,12 +33,6 @@ vim.keymap.set("n", "<leader>wd", "<C-W>c", { desc = "Delete window", silent = t
 vim.keymap.set("n", "<leader>wy", "<C-W>s", { desc = "Split window below", silent = true })
 vim.keymap.set("n", "<leader>wx", "<C-W>v", { desc = "Split window right", silent = true })
 
--- Tab
-vim.keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer", silent = true })
-vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer", silent = true })
-vim.keymap.set("n", "<S-j>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move tab to left", silent = true, noremap = true })
-vim.keymap.set("n", "<S-k>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move tab to right", silent = true })
-
 -- Move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line up", silent = true })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down", silent = true })
