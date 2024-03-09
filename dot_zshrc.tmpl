@@ -19,6 +19,16 @@ source "$HOME/.cargo/env"
 
 alias vim="nvim"
 alias tms="tmux-sessionizer"
+alias lg="lazygit"
+
+# Replace slow commands
+alias ls="eza"
+alias ll="eza -lh"
+alias l="eza -lah"
+alias cat='bat'
+
+# Git clean merged branches
+alias gcmb='git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d'
 
 source $ZSH/oh-my-zsh.sh
 
