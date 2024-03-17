@@ -19,7 +19,7 @@ return {
       local configs = require 'nvim-treesitter.configs'
 
       configs.setup {
-        ensure_installed = { 'javascript', 'typescript', 'css', 'html', 'php', 'rust', 'jsdoc', 'json', 'markdown', 'sql', 'yaml', 'tsx' },
+        ensure_installed = { 'javascript', 'typescript', 'css', 'html', 'php', 'rust', 'jsdoc', 'json', 'markdown', 'sql', 'yaml', 'tsx', 'prisma' },
         sync_install = false,
         autotag = {
           enable = true,
