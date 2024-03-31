@@ -1,5 +1,6 @@
-local servers = { 'dockerls', 'docker_compose_language_service', 'tsserver', 'rust_analyzer', 'tailwindcss', 'jsonls',
-  'cssls', 'html', 'biome', 'prismals' }
+local servers = { 'dockerls', 'docker_compose_language_service', 'tsserver', 'rust_analyzer', 'tailwindcss', 'jsonls', 'cssls', 'html', 'biome', 'prismals',
+  -- 'denols',
+}
 
 return {
   'williamboman/mason.nvim',
