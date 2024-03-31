@@ -1,12 +1,22 @@
 {{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin")) }}
 [user]
-	email = contact@yovach.dev
-	name = Quentin
+    email = contact@yovach.dev
+    name = Quentin
+    signingkey = /home/quentin/.ssh/id_rsa.pub
 {{ end }}
-
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [core]
-  editor = vim
-  eol = lf
-  autocrlf = false
+    editor = vim
+    eol = lf
+    autocrlf = false
+
+[pull]
+    rebase = true
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
