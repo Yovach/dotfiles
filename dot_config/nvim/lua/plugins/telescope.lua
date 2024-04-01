@@ -32,6 +32,10 @@ return {
       pickers = {
         find_files = {
           find_command = { 'rg', '--files', '--no-ignore-vcs', '--hidden', '-g', '!{.git,node_modules,.next,.pnpm}' },
+        },
+        live_grep = {
+          glob_pattern = '!{.git,node_modules,.next.pnpm}',
+          additional_args = {'--hidden'}
         }
       }
     }
