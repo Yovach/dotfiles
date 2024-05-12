@@ -55,7 +55,7 @@ return {
     -- See `:help telescope.builtin`
     nmap('<leader>?', require('telescope.builtin').oldfiles, '[?] Find recently opened files')
     nmap('<leader><space>', require('telescope.builtin').buffers, '[ ] Find existing buffers')
-    nmap('<leader>/', function()
+    nmap('<leader>f', function()
       -- You can pass additional configuration to telescope to change theme, layout, etc.
       require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
@@ -70,13 +70,10 @@ return {
       }
     end, '[S]earch [/] in Open Files')
 
-    nmap('<leader>ss', require('telescope.builtin').builtin, '[S]earch [S]elect Telescope')
-    nmap('<leader>gf', require('telescope.builtin').git_files, 'Search [G]it [F]iles')
-    nmap('<leader>sf', require('telescope.builtin').find_files, '[S]earch [F]iles')
-    nmap('<leader>sh', require('telescope.builtin').help_tags, '[S]earch [H]elp')
+    nmap('<leader>p', require('telescope.builtin').find_files, '[S]earch [F]iles')
     nmap('<leader>sw', require('telescope.builtin').grep_string, '[S]earch current [W]ord')
     nmap('<leader>sg', require('telescope.builtin').live_grep, '[S]earch by [G]rep')
-    nmap('<leader>sG', ':LiveGrepGitRoot<cr>', '[S]earch by [G]rep on Git Root')
+    nmap('<leader>F', ':LiveGrepGitRoot<cr>', '[S]earch by [G]rep on Git Root')
     nmap('<leader>sd', require('telescope.builtin').diagnostics, '[S]earch [D]iagnostics')
     nmap('<leader>sr', require('telescope.builtin').resume, '[S]earch [R]esume')
     nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
