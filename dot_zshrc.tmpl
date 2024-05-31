@@ -4,7 +4,7 @@ DISABLE_AUTO_UPDATE="true"
 
 EDITOR=vim
 
-plugins=(z fzf zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
@@ -13,6 +13,7 @@ export PATH="$HOME/.local/share/fnm:$PATH"
 {{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin")) }}
 # config perso
 # export PATH="$HOME/.symfony5/bin:$PATH"
+export PATH="$HOME/.fzf/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 source "$HOME/.cargo/env"
 export DENO_INSTALL="$HOME/.deno"
@@ -41,3 +42,5 @@ eval "$(starship init zsh)"
 # fnm
 eval "$(fnm env --use-on-cd)"
 
+# zoxide
+eval "$(zoxide init zsh)"
