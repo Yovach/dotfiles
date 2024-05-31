@@ -1,5 +1,6 @@
 import = [
-  "~/.config/alacritty/tokyonight_day.toml"
+  # "~/.config/alacritty/tokyonight_day.toml"
+  "~/.config/alacritty/tokyonight_night.toml"
 ]
 
 [env]
@@ -11,11 +12,17 @@ dynamic_title = false
 startup_mode = "maximized"
 
 [font]
-size = 14
 normal.family = "CaskaydiaCove Nerd Font"
+size = 14
 
 [keyboard]
 bindings = [
 	{ key = "F11", action = "ToggleFullscreen" },
 	{ key = "Space", mods = "Control", chars = "\u0000" }
 ]
+
+[cursor]
+blink_timeout = 0
+style.blinking = "Always"
+style.shape = "Underline"
+unfocused_hollow = false
