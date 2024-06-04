@@ -12,7 +12,7 @@ dynamic_title = false
 startup_mode = "maximized"
 
 [font]
-normal.family = "CaskaydiaCove Nerd Font"
+normal.family = "Cascadia Code NF"
 size = 14
 
 [keyboard]
