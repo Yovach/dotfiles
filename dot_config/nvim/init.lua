@@ -18,12 +18,10 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   }
 end
-vim.opt.rtp:prepend(lazypath)
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup('plugins')
 
-require('keymaps')
-
--- vim.keymap
+local keys = require('keymaps')
+keys.init()
