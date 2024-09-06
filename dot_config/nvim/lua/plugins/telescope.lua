@@ -62,7 +62,7 @@ return {
         previewer = false,
       })
     end, '[/] Fuzzily search in current buffer')
-    
+
     nmap('<leader>s/', function()
       require('telescope.builtin').live_grep {
         grep_open_files = true,
