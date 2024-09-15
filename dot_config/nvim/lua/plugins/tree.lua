@@ -1,15 +1,16 @@
 return {
-  "nvim-tree/nvim-tree.lua",
-  version = "*",
-  lazy = false,
+  'echasnovski/mini.files',
+  version = false,
   dependencies = {
-    "nvim-tree/nvim-web-devicons",
+    'echasnovski/mini.nvim',
   },
   config = function()
-    require("nvim-tree").setup {
-      view = {
-        side = "right",
-      }
-    }
+    local files = require('mini.files')
+    files.setup()
+
+    vim.keymap.set('n', '<leader>e', files.open)
+
+    local icons = require("mini.icons")
+    icons.setup()
   end,
 }

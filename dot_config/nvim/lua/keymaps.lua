@@ -94,12 +94,6 @@ function keys.init()
         desc = "Move line down",
         silent = true
     })
-
-    -- ENABLE FILE EXPLORER
-    vim.keymap.set("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", {
-        desc = "Toggle the NvimTree",
-        silent = true
-    })
 end
 
 return keys
