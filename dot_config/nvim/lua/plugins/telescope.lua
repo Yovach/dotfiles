@@ -71,10 +71,7 @@ return {
     end, '[S]earch [/] in Open Files')
 
     nmap('<leader>p', require('telescope.builtin').find_files, '[S]earch [F]iles')
-    nmap('<leader>sw', require('telescope.builtin').grep_string, '[S]earch current [W]ord')
     nmap('<leader>sg', require('telescope.builtin').live_grep, '[S]earch by [G]rep')
-    nmap('<leader>F', ':LiveGrepGitRoot<cr>', '[S]earch by [G]rep on Git Root')
-    nmap('<leader>sd', require('telescope.builtin').diagnostics, '[S]earch [D]iagnostics')
     nmap('<leader>sr', require('telescope.builtin').resume, '[S]earch [R]esume')
     nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
     nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
