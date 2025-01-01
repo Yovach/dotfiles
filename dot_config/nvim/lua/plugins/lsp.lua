@@ -1,4 +1,5 @@
 local servers = { 'dockerls', 'docker_compose_language_service', 'ts_ls', 'rust_analyzer', 'tailwindcss', 'jsonls', 'cssls', 'html', 'biome',
+  'pbls',
   -- 'denols',
 }
 
