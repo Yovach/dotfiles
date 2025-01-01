@@ -1,25 +1,25 @@
 {{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin")) }}
 [user]
-    email = contact@yovach.dev
-    name = Quentin
-    signingkey = /home/quentin/.ssh/id_ed25519.pub
+  name = Quentin
+  email = contact@yovach.dev
+  signingkey = /home/quentin/.ssh/id_ed25519.pub
 {{ end }}
 [init]
-    defaultBranch = main
+  defaultBranch = main
 
 [core]
-    editor = vim
-    eol = lf
-    autocrlf = false
+  editor = vim
+  eol = lf
+  autocrlf = false
 
 [pull]
-    rebase = true
+  rebase = true
 
 [commit]
-    gpgsign = true
+  gpgsign = true
 
 [gpg]
-    format = ssh
+  format = ssh
 
 [alias]
 	cleanup = "!git branch --merged | grep -Ev '(^\\*|master|main|dev)' | xargs git branch -d"
