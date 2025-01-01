@@ -61,7 +61,7 @@ return {
     -- See `:help telescope.builtin`
     nmap('<leader>?', require('telescope.builtin').oldfiles, '[?] Find recently opened files')
     nmap('<leader><space>', require('telescope.builtin').buffers, '[ ] Find existing buffers')
-    nmap('<leader>f', function()
+    nmap('<leader>/', function()
       -- You can pass additional configuration to telescope to change theme, layout, etc.
       require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
