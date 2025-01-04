@@ -15,5 +15,7 @@ config.window_padding = {
 config.front_end = 'WebGpu'
 config.win32_system_backdrop = 'Mica'
 config.window_background_opacity = 0
+config.window_close_confirmation = 'NeverPrompt'
+config.check_for_updates = false
 
 return config
