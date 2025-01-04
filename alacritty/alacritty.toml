@@ -1,0 +1,33 @@
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "full"
+dynamic_title = false
+startup_mode = "maximized"
+
+[font]
+normal.family = "Cascadia Mono NF"
+size = 14
+
+[keyboard]
+bindings = [
+	{ key = "F11", action = "ToggleFullscreen" },
+	{ key = "Space", mods = "Control", chars = "\u0000" }
+]
+
+[cursor]
+blink_timeout = 0
+style.blinking = "Always"
+style.shape = "Underline"
+unfocused_hollow = false
+
+[general]
+import = [
+  #"~\\AppData\\Roaming\\alacritty\\tokyonight_day.toml"
+  "~\\AppData\\Roaming\\alacritty\\tokyonight_night.toml"
+]
+
+[terminal]
+shell="pwsh"
