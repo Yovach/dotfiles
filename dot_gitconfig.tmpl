@@ -1,8 +1,8 @@
-{{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin")) }}
+{{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin") (eq .chezmoi.hostname "MacBook-Pro-de-Quentin") )}}
 [user]
   name = Quentin
   email = contact@yovach.dev
-  signingkey = /home/quentin/.ssh/id_ed25519.pub
+  signingkey = {{ .chezmoi.homeDir }}/.ssh/id_ed25519.pub
 {{ end }}
 [init]
   defaultBranch = main
