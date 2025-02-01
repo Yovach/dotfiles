@@ -1,10 +1,27 @@
 local wezterm = require 'wezterm'
 local config = {}
 
+-- get current appearence of OS
+function get_appearance()
+  if wezterm.gui then
+    return wezterm.gui.get_appearance()
+  end
+  return 'Dark'
+end
+
+-- theme following OS
+function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Tokyo Night'
+  end
+
+  return 'Tokyo Night Day'
+end
+
 config.enable_tab_bar = false
 config.font = wezterm.font 'Cascadia Mono NF'
 config.font_size = 14
-config.color_scheme = 'Tokyo Night'
+config.color_scheme = scheme_for_appearance(get_appearance())
 -- config.default_prog = { 'pwsh' }
 config.window_padding = {
     left = 0,
