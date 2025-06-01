@@ -1,9 +1,3 @@
-{{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin") (eq .chezmoi.hostname "MacBook-Pro-de-Quentin")) }}
-[user]
-  name = Quentin
-  email = contact@yovach.dev
-  signingkey = {{ .chezmoi.homeDir }}/.ssh/id_ed25519.pub
-{{ end }}
 [init]
   defaultBranch = main
 
@@ -31,6 +25,9 @@
 
 [alias]
 	cleanup = "!git branch --merged | grep -Ev '(^\\*|master|main|dev)' | xargs git branch -d"
+
+[includeIf "gitdir:~/projects/"]
+    path = ~/.gitconfig-personal
 
 [includeIf "gitdir:~/work/"]
     path = ~/.gitconfig-work
