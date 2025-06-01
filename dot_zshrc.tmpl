@@ -29,11 +29,22 @@ if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then
     export FPATH="$HOME/.zsh/completions:$FPATH"
 fi
 
+{{ if ne .chezmoi.os "darwin" }}
+# Homebrew configuration for Linux only
+if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+{{ end }}
+
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 export PATH="$HOME/.local/share/fnm:$PATH"
-export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Add go to $PATH if available
+if command -v go &> /dev/null; then
+    export PATH="$PATH:$(go env GOPATH)/bin"
+fi
 
 # Load aliases
 if [[ -f "$HOME/.zsh_aliases" ]]; then
