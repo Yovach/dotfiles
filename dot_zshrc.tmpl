@@ -1,45 +1,50 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-DISABLE_AUTO_UPDATE="true"
+# Zinit Setup
+if [[ ! -f "$HOME/.local/share/zinit/zinit.git/zinit.zsh" ]]; then
+    print -P "%F{33}Installing %F{220}ZDHARMA-CONTINUUM%F{33} Initiative Plugin Manager (%F{220}zdharma-continuum/zinit%F{33})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    if command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git"; then
+        print -P "%F{34}Installation successful.%f%b"
+    else
+        print -P "%F{160}The clone has failed.%f%b"
+    fi
+fi
 
-EDITOR=vim
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+# Load Zinit annexes
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+# Environment Variables
+export DISABLE_AUTO_UPDATE="true"
+export EDITOR="vim"
+
+# Add to FPATH
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then
+    export FPATH="$HOME/.zsh/completions:$FPATH"
+fi
 
 # Add additional paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 export PATH="$HOME/.local/share/fnm:$PATH"
-{{ if (or (eq .chezmoi.hostname "LAPTOP-QUENTIN") (eq .chezmoi.hostname "laptop-quentin")) }}
-# config perso
-export PATH="$HOME/.fzf/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-source "$HOME/.cargo/env"
-export DENO_INSTALL="$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-{{ end }}
+export PATH="$PATH:$(go env GOPATH)/bin"
 
-alias vim="nvim"
-alias tms="tmux-sessionizer"
-alias lg="lazygit"
+# Load aliases
+if [[ -f "$HOME/.zsh_aliases" ]]; then
+    source "$HOME/.zsh_aliases"
+fi
 
-# Replace slow commands
-alias ls="eza"
-alias ll="eza -lh"
-alias l="eza -lah"
-alias cat='bat'
-
-# Git clean merged branches
-alias gcmb='git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d'
-alias docker-off='docker rm $(docker ps -a -q) --force'
-
-source $ZSH/oh-my-zsh.sh
-
-# Initialize starship
+# Initialize tools
 eval "$(starship init zsh)"
-
-# fnm
 eval "$(fnm env --use-on-cd)"
-
-# zoxide
 eval "$(zoxide init zsh)"
+
+# Zinit Plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
