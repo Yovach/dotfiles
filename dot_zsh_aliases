@@ -1,0 +1,13 @@
+alias vim="nvim"
+alias tms="tmux-sessionizer"
+alias lg="lazygit"
+
+alias ls="eza"
+alias ll="eza -lh"
+alias l="eza -lah"
+alias cat='bat'
+
+# Git clean merged branches and remove Docker containers
+alias gcmb='git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d'
+alias docker-off='docker rm $(docker ps -a -q) --force'
+
