@@ -26,8 +26,5 @@
 [alias]
 	cleanup = "!git branch --merged | grep -Ev '(^\\*|master|main|dev)' | xargs git branch -d"
 
-[includeIf "gitdir:~/projects/"]
-    path = ~/.gitconfig-personal
-
 [includeIf "gitdir:~/work/"]
     path = ~/.gitconfig-work
