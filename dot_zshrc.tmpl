@@ -56,9 +56,9 @@ if [[ -f "$HOME/.zsh_aliases" ]]; then
 fi
 
 # Initialize tools
-eval "$(starship init zsh)"
-eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init zsh)"
+command -v starship &>/dev/null && eval "$(starship init zsh)"
+command -v fnm &>/dev/null && eval "$(fnm env --use-on-cd)"
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
 
 # Zinit Plugins
 zinit light zsh-users/zsh-syntax-highlighting
