@@ -20,9 +20,13 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
+# Initialize completion system
+autoload -Uz compinit && compinit
+
 # Environment Variables
 export DISABLE_AUTO_UPDATE="true"
 export EDITOR="vim"
+export HOMEBREW_NO_AUTO_UPDATE="true"  # Prevent Homebrew from auto-updating
 
 # Add to FPATH
 if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then
@@ -59,3 +63,4 @@ eval "$(zoxide init zsh)"
 # Zinit Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
