@@ -61,6 +61,7 @@ command -v fnm &>/dev/null && eval "$(fnm env --use-on-cd)"
 command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
 
 # Zinit Plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
+zinit light-mode for \
+    zsh-users/zsh-syntax-highlighting \
+    zsh-users/zsh-completions \
+    zsh-users/zsh-autosuggestions
