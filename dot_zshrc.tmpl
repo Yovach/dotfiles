@@ -20,8 +20,14 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
 
-# Initialize completion system
-autoload -Uz compinit && compinit
+# Initialize completion system and its cache completions
+export ZSH_COMPDUMP="${ZDOTDIR:-$HOME}/.zcompdump"
+autoload -Uz compinit
+if [[ -n "$ZSH_COMPDUMP" ]]; then
+    compinit -C -d "$ZSH_COMPDUMP"
+else
+    compinit -C
+fi
 
 # Environment Variables
 export DISABLE_AUTO_UPDATE="true"
