@@ -12,10 +12,10 @@ end
 -- theme following OS
 function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Tokyo Night'
+    return 'Catppuccin Macchiato'
   end
 
-  return 'Tokyo Night Day'
+  return 'Catppuccin Latte'
 end
 
 config.enable_tab_bar = false
