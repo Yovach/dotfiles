@@ -64,7 +64,7 @@ fi
 # Initialize tools
 command -v starship &>/dev/null && eval "$(starship init zsh)"
 command -v fnm &>/dev/null && eval "$(fnm env --use-on-cd)"
-command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh --cmd cd)"
 command -v fzf &>/dev/null && eval "$(fzf --zsh)"
 
 # Zinit Plugins
